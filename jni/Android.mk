@@ -30,9 +30,9 @@ LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/sqAndroidV
 LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/sqAndroidSemaphores.c 
 LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/sqAndroidSoundNull.c 
 LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/sqAndroidDisplay.c
-LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/sqHeapMap.c 
-LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/sqNamedPrims.c 
-LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/sqVirtualMachine.c
+LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/Cross/vm/sqHeapMap.c 
+LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/Cross/vm/sqNamedPrims.c 
+LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/Cross/vm/sqVirtualMachine.c
 LOCAL_SRC_FILES += /builds/workspace/ARM-Android/src/vm/gcc3x-interp.c
 
 include /builds/workspace/ARM-Android/build/AndroidPlugin/cogsources.mk
