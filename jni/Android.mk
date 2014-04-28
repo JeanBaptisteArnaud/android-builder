@@ -14,7 +14,6 @@ TARGET_ARCH = arm
 	/builds/workspace/ARM-Android/platforms/android/config/verstamp /builds/workspace/ARM-Android/build/version.c gcc
 
 LOCAL_SRC_FILES = /builds/workspace/ARM-Android/build/version.c
-LOCAL_SRC_FILES += /builds/workspace/ARM-Android/src/vm/gcc3x-interp.c
 LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/aio.c 
 LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/debug.c 
 LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/osExports.c 
@@ -30,6 +29,7 @@ LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/sqAndroidD
 LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/vm/sqHeapMap.c 
 LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/vm/sqNamedPrims.c 
 LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/vm/sqVirtualMachine.c
+LOCAL_SRC_FILES += /builds/workspace/ARM-Android/src/vm/gcc3x-interp.c
 
 include /builds/workspace/ARM-Android/build/AndroidPlugin/cogsources.mk
 include /builds/workspace/ARM-Android/build/BitBltPlugin/cogsources.mk
