@@ -7,9 +7,8 @@ LOCAL_C_INCLUDES = /builds/workspace/ARM-Android/platforms/android/vm
 LOCAL_C_INCLUDES += /builds/workspace/ARM-Android/src/vm 
 LOCAL_C_INCLUDES += /builds/workspace/ARM-Android/platforms/Cross/vm
 LOCAL_C_INCLUDES += /builds/workspace/ARM-Android/build
-LOCAL_C_INCLUDES += /builds/workspace/ARM-Android/platforms/Cross/plugins/B3DAcceleratorPlugin
-LOCAL_C_INCLUDES += /builds/workspace/ARM-Android/platforms/unix/plugins/B3DAcceleratorPlugin 
 
+LOCAL_CFLAGS += -DLSB_FIRST=0 -DAVOID_OPENGL_H -DSTACKVM -DNO_VM_PROFILE -DFT2_BUILD_LIBRARY
 
 TARGET_ARCH = arm
 
@@ -60,3 +59,4 @@ include /builds/workspace/ARM-Android/build/MiscPrimitivePlugin/cogsources.mk
 include /builds/workspace/ARM-Android/build/ZipPlugin/cogsources.mk
  
 include $(BUILD_SHARED_LIBRARY)
+
