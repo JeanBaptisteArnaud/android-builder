@@ -7,7 +7,8 @@ LOCAL_C_INCLUDES = /builds/workspace/ARM-Android/platforms/android/vm
 LOCAL_C_INCLUDES += /builds/workspace/ARM-Android/src/vm 
 LOCAL_C_INCLUDES += /builds/workspace/ARM-Android/platforms/Cross/vm
 LOCAL_C_INCLUDES += /builds/workspace/ARM-Android/build
-LOCAL_C_INCLUDES += /builds/workspace/ARM-Android/platforms/Cross/plugins/B3DAcceleratorPlugin 
+LOCAL_C_INCLUDES += /builds/workspace/ARM-Android/platforms/Cross/plugins/B3DAcceleratorPlugin
+LOCAL_C_INCLUDES += /builds/workspace/ARM-Android/platforms/unix/plugins/B3DAcceleratorPlugin 
 
 
 TARGET_ARCH = arm
