@@ -5,8 +5,9 @@ LOCAL_MODULE    := pharoVM
 
 LOCAL_C_INCLUDES = /builds/workspace/ARM-Android/platforms/android/vm 
 LOCAL_C_INCLUDES += /builds/workspace/ARM-Android/src/vm 
-LOCAL_C_INCLUDES += /builds/workspace/ARM-Android/platforms/android/vm 
+LOCAL_C_INCLUDES += /builds/workspace/ARM-Android/platforms/Cross/vm
 LOCAL_C_INCLUDES += /builds/workspace/ARM-Android/build
+
 TARGET_ARCH = arm
 
 /builds/workspace/ARM-Android/build/version.c:
