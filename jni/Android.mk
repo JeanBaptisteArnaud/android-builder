@@ -7,11 +7,15 @@ LOCAL_C_INCLUDES = /builds/workspace/ARM-Android/platforms/android/vm
 LOCAL_C_INCLUDES += /builds/workspace/ARM-Android/src/vm 
 LOCAL_C_INCLUDES += /builds/workspace/ARM-Android/platforms/Cross/vm
 LOCAL_C_INCLUDES += /builds/workspace/ARM-Android/build
+LOCAL_C_INCLUDES += /builds/workspace/ARM-Android/platforms/Cross/plugins/B3DAcceleratorPlugin 
+
 
 TARGET_ARCH = arm
 
 /builds/workspace/ARM-Android/build/version.c:
 	/builds/workspace/ARM-Android/platforms/android/config/verstamp /builds/workspace/ARM-Android/build/version.c gcc
+
+
 
 LOCAL_SRC_FILES = /builds/workspace/ARM-Android/build/version.c
 LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/aio.c 
