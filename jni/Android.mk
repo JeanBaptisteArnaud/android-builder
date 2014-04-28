@@ -58,4 +58,4 @@ include /builds/workspace/ARM-Android/build/SocketPlugin/cogsources.mk
 include /builds/workspace/ARM-Android/build/MiscPrimitivePlugin/cogsources.mk
 include /builds/workspace/ARM-Android/build/ZipPlugin/cogsources.mk
  
- 
+ include $(BUILD_SHARED_LIBRARY)
