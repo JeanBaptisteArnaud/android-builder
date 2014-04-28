@@ -1,17 +1,6 @@
 LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
-topDir := $(ROOT)//Users/jbarnaud/Documents/Repository/pharo-vm
-buildDir := $(ROOT)//Users/jbarnaud/Documents/Repository/pharo-vm/build
-platformsDir := $(ROOT)//Users/jbarnaud/Documents/Repository/pharo-vm/platforms
-srcDir := $(ROOT)//Users/jbarnaud/Documents/Repository/pharo-vm/src
-srcPluginsDir := $(srcDir)/plugins
-srcVMDir := $(srcDir)/vm
-platformName := android
-targetPlatform := $(platformsDir)/$(platformName)
-crossDir := $(platformsDir)/Cross
-platformVMDir := $(targetPlatform)/vm
-
 LOCAL_MODULE    := pharoVM
 
 LOCAL_C_INCLUDES = /builds/workspace/ARM-Android/platforms/android/vm 
@@ -69,5 +58,4 @@ include /builds/workspace/ARM-Android/build/SocketPlugin/cogsources.mk
 include /builds/workspace/ARM-Android/build/MiscPrimitivePlugin/cogsources.mk
 include /builds/workspace/ARM-Android/build/ZipPlugin/cogsources.mk
  
-include $(BUILD_SHARED_LIBRARY)
-
+ 
