@@ -10,6 +10,8 @@ LOCAL_C_INCLUDES += /builds/workspace/ARM-Android/build
 
 LOCAL_CFLAGS += -DLSB_FIRST=0 -DAVOID_OPENGL_H -DSTACKVM -DNO_VM_PROFILE -DFT2_BUILD_LIBRARY
 
+LOCAL_LDLIBS += -llog
+
 TARGET_ARCH = arm
 
 /builds/workspace/ARM-Android/build/version.c:
@@ -54,7 +56,7 @@ include /builds/workspace/ARM-Android/build/LocalePlugin/cogsources.mk
 include /builds/workspace/ARM-Android/build/RePlugin/cogsources.mk
 include /builds/workspace/ARM-Android/build/SecurityPlugin/cogsources.mk
 include /builds/workspace/ARM-Android/build/JPEGReadWriter2Plugin/cogsources.mk
-#include /builds/workspace/ARM-Android/build/SocketPlugin/cogsources.mk
+include /builds/workspace/ARM-Android/build/SocketPlugin/cogsources.mk
 include /builds/workspace/ARM-Android/build/MiscPrimitivePlugin/cogsources.mk
 include /builds/workspace/ARM-Android/build/ZipPlugin/cogsources.mk
  
