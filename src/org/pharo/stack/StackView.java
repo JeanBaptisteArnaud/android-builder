@@ -22,7 +22,7 @@ import java.util.Arrays;
 import java.lang.System;
 
 public class StackView extends View {
-	CogVM vm;
+	StackVM vm;
 	int bits[];
 	int width;
 	int height;
@@ -36,7 +36,7 @@ public class StackView extends View {
 	final int radius = 2;
 	boolean softKbdOn;
 	int ctrlOn, shiftOn;
-	CogActivity ctx;
+	StackActivity ctx;
 	Paint paint;
 	int timerDelay;
 
@@ -53,8 +53,8 @@ public class StackView extends View {
 	/* Closure -- ha-ha */
 
 	private class RR extends ResultReceiver {
-		CogView owner;
-		public RR(CogView sv) {
+		StackView owner;
+		public RR(StackView sv) {
 			super(getHandler());
 			owner = sv;
 		}
@@ -87,7 +87,7 @@ public class StackView extends View {
 }
 
 	public void timerEvent(final int r, final int d) {
-		final class CogTimer implements Runnable {
+		final class StackTimer implements Runnable {
 			public void run() {
 				timerEvent(r - d, d);
 			}
@@ -95,12 +95,12 @@ public class StackView extends View {
 		if(r <= 0) return;
 		int rc = 0;
 		if(vm != null) rc = vm.interpret();
-		postDelayed(new CogTimer(), (rc != 0) ? 0 : timerDelay);
+		postDelayed(new StackTimer(), (rc != 0) ? 0 : timerDelay);
 	}
 
 	public StackView(Context context) {
 		super(context);
-		ctx = (CogActivity)context;
+		ctx = (StackActivity)context;
 		timerDelay = 200;
 		width = 0;
 		height = 0;
@@ -148,7 +148,7 @@ public class StackView extends View {
 	// Key down: show/hide soft keyboard on menu button. Back button turns the mouse
 	// yellow for one click. Page up button turns the mouse blue for one click.
 	// Unicode characters will be sent in the extra characters string attached to the
-	// message as multiple action. The preinstalled onKeyListener (see CogActivity)
+	// message as multiple action. The preinstalled onKeyListener (see StackActivity)
 	// catches these multiple action events and redirects them to the view's
 	// onKeyDown callback with keyCode = -1. It is the callback's responsibility
 	// to extract the unicode character from the extra characters string:
