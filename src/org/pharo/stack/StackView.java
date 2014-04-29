@@ -1,6 +1,5 @@
 package org.pharo.stack;
 
-
 import org.pharo.stack.StackVM;
 import android.app.Activity;
 import android.content.Context;

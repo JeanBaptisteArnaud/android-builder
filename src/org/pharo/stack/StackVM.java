@@ -1,5 +1,7 @@
 package org.pharo.stack;
 
+
+import pharo.eu.android.R;
 import android.content.res.AssetManager;
 import java.lang.Exception;
 import java.io.File;
