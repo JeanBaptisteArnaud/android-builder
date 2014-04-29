@@ -292,6 +292,6 @@ public class StackVM {
     /* Load the StackVM module */
     static {
     	System.out.println("Loading Stackvm shared library");
-        System.loadLibrary("Stackvm");
+        System.loadLibrary("pharoVM");
     }
 }
