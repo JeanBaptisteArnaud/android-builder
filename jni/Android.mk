@@ -54,7 +54,7 @@ include /builds/workspace/ARM-Android/build/LocalePlugin/cogsources.mk
 include /builds/workspace/ARM-Android/build/RePlugin/cogsources.mk
 include /builds/workspace/ARM-Android/build/SecurityPlugin/cogsources.mk
 include /builds/workspace/ARM-Android/build/JPEGReadWriter2Plugin/cogsources.mk
-include /builds/workspace/ARM-Android/build/SocketPlugin/cogsources.mk
+#include /builds/workspace/ARM-Android/build/SocketPlugin/cogsources.mk
 include /builds/workspace/ARM-Android/build/MiscPrimitivePlugin/cogsources.mk
 include /builds/workspace/ARM-Android/build/ZipPlugin/cogsources.mk
  
