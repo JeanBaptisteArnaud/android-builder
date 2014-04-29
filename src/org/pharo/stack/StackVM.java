@@ -6,7 +6,6 @@ import java.io.File;
 import java.io.InputStream;
 import java.io.FileInputStream;
 
-import android.R;
 
 import java.util.Locale;
 import java.text.DateFormatSymbols;

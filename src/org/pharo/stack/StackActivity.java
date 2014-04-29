@@ -9,7 +9,6 @@ import org.pharo.stack.StackVM;
 import org.pharo.stack.StackView;
 import org.pharo.stack.StackImgList;
 
-import android.R;
 import android.widget.Toast;
 import android.widget.ListAdapter;
 import android.widget.ArrayAdapter;
