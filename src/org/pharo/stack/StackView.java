@@ -9,7 +9,7 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.view.View;
 import android.view.MotionEvent;
-import android.view.KeyEvent;
+import android.view.KeyEvent
 
 import android.os.Bundle;
 import android.os.ResultReceiver;
