@@ -115,11 +115,8 @@ public class StackView extends View {
 
 	protected void onLayout(boolean changed, int left, int top, int right, int bottom)
 	{
-		if(!changed) return;
 		this.width = right - left;
-		ctx.toastMsg("onLayout width" + this.width);
 		this.height = bottom - top;
-		ctx.toastMsg("onLayout height" + this.height);
 		this.bits = new int[this.width * this.height];
 		Arrays.fill(bits, 0);
 		vm.setScreenSize(this.width, this.height);
