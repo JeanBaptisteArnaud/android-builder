@@ -115,6 +115,7 @@ public class StackView extends View {
 
 	protected void onLayout(boolean changed, int left, int top, int right, int bottom)
 	{
+		if(!changed) return;
 		this.width = right - left;
 		this.height = bottom - top;
 		this.bits = new int[this.width * this.height];

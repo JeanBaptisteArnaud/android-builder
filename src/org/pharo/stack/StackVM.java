@@ -291,6 +291,7 @@ public class StackVM {
 
     /* Load the StackVM module */
     static {
+		System.out.println(ByteOrder.nativeOrder());
     	System.out.println("Loading Stackvm shared library");
         System.loadLibrary("pharoVM");
 		System.out.println("Pharo loaded");
