@@ -293,5 +293,6 @@ public class StackVM {
     static {
     	System.out.println("Loading Stackvm shared library");
         System.loadLibrary("pharoVM");
+		System.out.println("Pharo loaded");
     }
 }
