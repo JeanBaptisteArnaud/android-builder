@@ -117,9 +117,9 @@ public class StackView extends View {
 	{
 		if(!changed) return;
 		this.width = right - left;
-		ctx.toastMsg("onLayout width" + this.width.toString());
+		ctx.toastMsg("onLayout width" + this.width);
 		this.height = bottom - top;
-		ctx.toastMsg("onLayout height" + this.height.toString());
+		ctx.toastMsg("onLayout height" + this.height);
 		this.bits = new int[this.width * this.height];
 		Arrays.fill(bits, 0);
 		vm.setScreenSize(this.width, this.height);
