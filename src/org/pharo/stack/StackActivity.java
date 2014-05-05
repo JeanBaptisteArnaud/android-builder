@@ -176,7 +176,7 @@ public class StackActivity extends Activity implements TextToSpeech.OnInitListen
 	AssetManager am = ctx.getAssets();
 	try {
 	    String asroot = "image";
-  	    String path = "tmpimage.image";
+  	    String path = "pharoImage.image";
 	    int buflen = 65536;
 	    byte[] buf = new byte[buflen];
 	    int ofs, len;
@@ -276,7 +276,7 @@ public class StackActivity extends Activity implements TextToSpeech.OnInitListen
     	/* stupid setup dance but I'm not sure who is going to need what here */
     	vm = new StackVM();
     	vm.context = this;
-	vm.setLogLevel(9);
+		vm.setLogLevel(9);
     	view = new StackView(this);
     	view.vm = vm;
     	vm.view = view;
