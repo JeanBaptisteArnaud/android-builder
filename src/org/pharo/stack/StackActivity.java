@@ -10,6 +10,7 @@ import org.pharo.stack.StackView;
 import org.pharo.stack.StackImgList;
 
 import pharo.eu.android.R;
+import android.util.Log;
 import android.widget.Toast;
 import android.widget.ListAdapter;
 import android.widget.ArrayAdapter;
@@ -58,11 +59,12 @@ public class StackActivity extends Activity implements TextToSpeech.OnInitListen
 	private Toast busy = null;
 	boolean canspeak = false;
 	boolean imgasset = false;
-
+	private static final String TAG = "JAVA Pharo Act";
+	
     // Implements TextToSpeech.OnInitListener.
     public void onInit(int status) {
         // status can be either TextToSpeech.SUCCESS or TextToSpeech.ERROR.
-	    toastMsg("status: " + status);
+	   	Log.v(TAG, "status: " + status);
     	    if (status == TextToSpeech.SUCCESS) {
 	    Locale loc = Locale.getDefault();
             // Set preferred language to US english.
@@ -72,10 +74,10 @@ public class StackActivity extends Activity implements TextToSpeech.OnInitListen
             // int result mTts.setLanguage(Locale.FRANCE);
             if (result == TextToSpeech.LANG_NOT_SUPPORTED) {
                // Lanuage data is missing or the language is not supported.
-                toastMsg(loc.toString() + ": Language is not supported.");
+               Log.v(TAG, loc.toString() + ": Language is not supported.");
 	    } else if (result == TextToSpeech.LANG_MISSING_DATA) {
                // Lanuage data is missing or the language is not supported.
-                toastMsg(loc.toString() + ": Missing language data.");
+               Log.v(TAG, loc.toString() + ": Missing language data.");
             } else {
                 // The TTS engine has been successfully initialized.
  		    canspeak = true;
@@ -85,7 +87,7 @@ public class StackActivity extends Activity implements TextToSpeech.OnInitListen
             }
         } else {
             // Initialization failed.
-            toastMsg("Could not initialize TextToSpeech.");
+           Log.v(TAG, "Could not initialize TextToSpeech.");
         }
     }
 
@@ -323,7 +325,7 @@ public class StackActivity extends Activity implements TextToSpeech.OnInitListen
 	    ntf.flags |= Notification.FLAG_NO_CLEAR;
 	    notmgr.notify(1, ntf);
 	} catch (Exception e) {
-	    toastMsg(e.toString());
+	   Log.v(TAG, e.toString());
 	}
 
     }
@@ -339,12 +341,6 @@ public class StackActivity extends Activity implements TextToSpeech.OnInitListen
         super.onDestroy();
     }
 
-
-    public void toastMsg(String txt) {
-	Toast toast=Toast.makeText(this, txt, 4000);
-	    toast.setGravity(Gravity.TOP, -30, 50);
-	    toast.show();
-    }
 
     public void showBusyMsg() {
 	if (busy != null) busy.cancel();

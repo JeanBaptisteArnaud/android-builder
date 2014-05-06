@@ -14,6 +14,7 @@ import java.text.DateFormatSymbols;
 import java.text.SimpleDateFormat;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
+import android.util.Log;
 
 import org.pharo.stack.StackActivity;
 import org.pharo.stack.StackView;
@@ -37,6 +38,7 @@ public class StackVM {
 	float pitch = 1.0f;
 	float rate = 1.0f;
 
+	private static final String TAG = "JAVA Pharo VM";
 /* Store the desired speech rate value */
 
     int setSpeechRate(float r) {
@@ -73,7 +75,7 @@ public class StackVM {
 
     int speak(String txt) {
 	if(mTts == null) return -1;
-	context.toastMsg("speaking: " + txt);
+	Log.v(TAG, "speaking: " + txt);
 	mTts.setPitch(pitch);
 	mTts.setSpeechRate(rate);
  	mTts.speak(txt, TextToSpeech.QUEUE_ADD, null);
@@ -84,7 +86,7 @@ public class StackVM {
 /* Finish the whole activity */
 
     public void finish() {
-	context.toastMsg("Stack VM finishing");
+	Log.v(TAG, "Stack VM finishing");
 	context.finish();
        	String ns = Context.NOTIFICATION_SERVICE;
         NotificationManager notmgr = (NotificationManager) context.getSystemService(ns);
@@ -161,17 +163,17 @@ public class StackVM {
 	        String imgpath = imageName;
 	        File imgfile = new File(imgpath);
 	        long fsize = imgfile.length();
-	        context.toastMsg("image found size: " + fsize);
+	        Log.v(TAG, "image found size: " + fsize);
 	        int irc = setImagePath(imageName, cmd);
 	        if (irc != 0) {
-		       context.toastMsg("Failed to load image " + imageName);
+		       Log.v(TAG, "Failed to load image " + imageName);
 	        } else {
 	            imageDir = new File(imgpath).getParentFile();
       	            context.setWindowTitle("Stack: " + imgpath);
 	            interpret();
 	        }
     	    } catch (Exception e) {
-	    context.toastMsg("Failed to load image " + imageName + ": " + e.toString());
+	    Log.v(TAG, "Failed to load image " + imageName + ": " + e.toString());
 	}
     }
 
@@ -196,7 +198,7 @@ public class StackVM {
     /* Display a brief message (toast) - to be called by the interpreter */
 
     public void briefMessage(String s) {
-        context.toastMsg(s);
+        Log.v(TAG, s);
     }
 
     /* Obtain a string of text from Android clipboard, if available */
