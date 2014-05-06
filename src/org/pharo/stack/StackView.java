@@ -1,5 +1,7 @@
 package org.pharo.stack;
 
+
+import android.util.Log;
 import org.pharo.stack.StackVM;
 import android.app.Activity;
 import android.content.Context;
@@ -39,6 +41,8 @@ public class StackView extends View {
 	Paint paint;
 	int timerDelay;
 
+	private static final String TAG = "JAVA Pharo View";
+	
 	public int getTimerDelay() {
 	    return timerDelay;
 	}
@@ -169,7 +173,6 @@ public class StackView extends View {
 	}
 
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
-//		ctx.toastMsg("Key Event: " + event + " " + keyCode);
 		int rc;
 		switch(keyCode) {
 			case 59:
@@ -185,17 +188,17 @@ public class StackView extends View {
 				{
 				    case yellowButtonBit:
 				        buttonBits = blueButtonBit;
-				        ctx.toastMsg("mouse blue");
+				        Log.v(TAG, "mouse blue");
 					break;
 				    default:
 				        buttonBits = yellowButtonBit;
-				        ctx.toastMsg("mouse yellow");
+				        Log.v(TAG, "mouse yellow");
 					break;
 				}
 				return true;
 			case 92: //KeyEvent.KEYCODE_PAGE_UP:
 				buttonBits = blueButtonBit;
-				ctx.toastMsg("mouse blue");
+				Log.v(TAG, "mouse blue");
 				return true;
 			case KeyEvent.KEYCODE_MENU:
 				InputMethodManager imm = (InputMethodManager)

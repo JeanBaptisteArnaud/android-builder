@@ -149,12 +149,12 @@ public class StackActivity extends Activity implements TextToSpeech.OnInitListen
 	} else {
 	    String imgpath = uri.getPath();
 	    if(imgpath == null || !uri.getScheme().equals("file")) {
-		toastMsg("intent contains no file path");
+		Log.v(TAG, "intent contains no file path");
 		finish();
 	    }
 	    File imgf = new File(imgpath);
             if(!imgf.exists()) {
-		toastMsg("file " + imgpath + " does not exist");
+		Log.v(TAG, "file " + imgpath + " does not exist");
 		finish();
 	    }
 	    String cmd = intnt.getStringExtra("command");
@@ -200,7 +200,7 @@ public class StackActivity extends Activity implements TextToSpeech.OnInitListen
 	    imgasset = true;
 	    startVM(tmpi, "");
 	} catch (Exception e) {
-	    ctx.toastMsg(e.toString());
+	    Log.v(TAG, e.toString());
 	    return false;
 	}
         return true;
@@ -252,7 +252,7 @@ public class StackActivity extends Activity implements TextToSpeech.OnInitListen
     }
 
     void loadFromList(final StackActivity ctx) {
-  	toastMsg("Select an image to load");
+  	Log.v(TAG, "Select an image to load");
 	String extdir = Environment.getExternalStorageDirectory().getAbsolutePath();
 	String imgdirs = extdir + File.pathSeparator + getText(R.string.imgdirs).toString();
 	File[] imgfiles = findImageFiles(imgdirs.split(File.pathSeparator));
