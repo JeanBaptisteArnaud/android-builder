@@ -8,7 +8,7 @@ LOCAL_C_INCLUDES += /builds/workspace/ARM-Android/src/vm
 LOCAL_C_INCLUDES += /builds/workspace/ARM-Android/platforms/Cross/vm
 LOCAL_C_INCLUDES += /builds/workspace/ARM-Android/build
 
-LOCAL_CFLAGS += -DLSB_FIRST=0 -DAVOID_OPENGL_H -DSTACKVM -DNO_VM_PROFILE -DFT2_BUILD_LIBRARY -DITIMER_HEARTBEAT=1
+LOCAL_CFLAGS += -DLSB_FIRST=0 -DAVOID_OPENGL_H -DSTACKVM -DNO_VM_PROFILE -DFT2_BUILD_LIBRARY -DITIMER_HEARTBEAT=1 -DANDROID
 
 LOCAL_LDLIBS += -llog
 
@@ -29,9 +29,9 @@ LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/sqUnixHear
 LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/sqUnixMain.c 
 LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/sqUnixMemory.c 
 LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/sqUnixVMProfile.c 
-LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/sqUnixSemaphores.c 
 LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/sqUnixSoundNull.c 
 LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/sqUnixDisplay.c
+LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/Cross/vm/sqExternalSemaphores.c 
 LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/Cross/vm/sqHeapMap.c 
 LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/Cross/vm/sqNamedPrims.c 
 LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/Cross/vm/sqVirtualMachine.c
