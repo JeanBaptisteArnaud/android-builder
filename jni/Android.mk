@@ -39,7 +39,7 @@ LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/Cross/vm/sqVirtualMac
 LOCAL_SRC_FILES += /builds/workspace/ARM-Android/src/vm/gcc3x-interp.c
 
 #include /builds/workspace/ARM-Android/build/AndroidPlugin/cogsources.mk
-#include /builds/workspace/ARM-Android/build/BitBltPlugin/cogsources.mk
+include /builds/workspace/ARM-Android/build/BitBltPlugin/cogsources.mk
 #include /builds/workspace/ARM-Android/build/B2DPlugin/cogsources.mk
 #include /builds/workspace/ARM-Android/build/BMPReadWriterPlugin/cogsources.mk
 #include /builds/workspace/ARM-Android/build/CroquetPlugin/cogsources.mk
