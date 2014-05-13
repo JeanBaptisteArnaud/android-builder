@@ -316,7 +316,7 @@ public class StackActivity extends Activity implements TextToSpeech.OnInitListen
 	    NotificationManager notmgr = (NotificationManager) getSystemService(ns);
 	    Notification ntf = new Notification(R.drawable.ntficon, "", System.currentTimeMillis());
             Context context = getApplicationContext();
-            CharSequence contentTitle = "StackDroid";
+            CharSequence contentTitle = "StackVM";
             CharSequence contentText = imgpath;
             Intent notificationIntent = new Intent(this, StackActivity.class);
             PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
