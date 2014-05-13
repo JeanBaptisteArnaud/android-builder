@@ -21,9 +21,9 @@ TARGET_ARCH = arm
 
 
 LOCAL_SRC_FILES = /builds/workspace/ARM-Android/build/version.c
-LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/unix/vm/aio.c 
-LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/unix/vm/debug.c 
-LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/unix/vm/osExports.c 
+LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/aio.c 
+LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/debug.c 
+LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/osExports.c 
 LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/sqAndroidCharConv.c 
 LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/sqAndroidExternalPrims.c 
 LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/sqAndroidEvtBeat.c 
