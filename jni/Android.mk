@@ -7,7 +7,7 @@ LOCAL_C_INCLUDES = /builds/workspace/ARM-Android/platforms/android/vm
 LOCAL_C_INCLUDES += /builds/workspace/ARM-Android/src/vm 
 LOCAL_C_INCLUDES += /builds/workspace/ARM-Android/platforms/Cross/vm
 LOCAL_C_INCLUDES += /builds/workspace/ARM-Android/build
-LOCAL_C_INCLUDES = /builds/workspace/ARM-Android/platforms/unix/vm 
+LOCAL_C_INCLUDES += /builds/workspace/ARM-Android/platforms/unix/vm 
 
 LOCAL_CFLAGS += -DLSB_FIRST=0 -DAVOID_OPENGL_H -DSTACKVM -DNO_VM_PROFILE -DFT2_BUILD_LIBRARY
 
