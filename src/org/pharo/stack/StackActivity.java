@@ -285,7 +285,7 @@ public class StackActivity extends Activity implements TextToSpeech.OnInitListen
 	if(canspeak) vm.mTts = mTts;
         DisplayMetrics metrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(metrics); setContentView(view);
-	vm.setScreenSize(metrics.widthPixels, metrics.heightPixels);
+		//vm.setScreenSize(metrics.widthPixels, metrics.heightPixels);
     	vm.loadImage(imgpath, cmd);
 	/* Unicode characters may be passed as extra characters array with action code
 	 * ACTION_MULTIPLE. Examine this, an if not the case, return false to pass the

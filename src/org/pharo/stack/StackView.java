@@ -124,7 +124,7 @@ public class StackView extends View {
 		this.height = bottom - top;
 		this.bits = new int[this.width * this.height];
 		Arrays.fill(bits, 0);
-		vm.setScreenSize(this.width, this.height);
+		//vm.setScreenSize(this.width, this.height);
 	}
 
 
@@ -324,7 +324,7 @@ public class StackView extends View {
 	if (bits == null) return;
     	Rect dirtyRect = new Rect(0,0,0,0);
     	if(canvas.getClipBounds(dirtyRect)) {
-    		vm.updateDisplay(bits, width, height, depth, 
+    		//vm.updateDisplay(bits, width, height, depth, 
 				dirtyRect.left, dirtyRect.top, dirtyRect.right, dirtyRect.bottom);
     	}
         super.onDraw(canvas);

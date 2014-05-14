@@ -91,7 +91,7 @@ public class StackVM {
        	String ns = Context.NOTIFICATION_SERVICE;
         NotificationManager notmgr = (NotificationManager) context.getSystemService(ns);
 	if(notmgr != null) notmgr.cancelAll();
-	surelyExit();
+	//surelyExit();
     }
 
 /* Helper method to place a shortcut icon on the home screen for the given image */
@@ -179,7 +179,7 @@ public class StackVM {
 
     public int postEvent(int type, int stamp, int arg3, int arg4,
 			 int arg5, int arg6, int arg7, int arg8) {
-        int rc = sendEvent(type, stamp, arg3, arg4, arg5, arg6, arg7, arg8);
+       // int rc = sendEvent(type, stamp, arg3, arg4, arg5, arg6, arg7, arg8);
 	return rc;
     }
    
@@ -283,7 +283,7 @@ public class StackVM {
 
     /* Main entry points */
     //public native int setScreenSize(int w, int h);
-    //public native int setImagePath(String imageName, String cmd);
+    public native int setImagePath(String imageName, String cmd);
     //public native int sendEvent(int type, int stamp, int arg3, int arg4,
 	//			int arg5, int arg6, int arg7, int arg8);
     //public native int updateDisplay(int bits[], int w, int h, int d, int l, int t, int r, int b);
