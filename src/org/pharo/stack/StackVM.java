@@ -279,8 +279,7 @@ public class StackVM {
     }
 
     /* PRELOAD functions */
-    public native int setLogLevel(int logLevel);
-
+ 
     /* Main entry points */
     public native int setScreenSize(int w, int h);
     public native int setImagePath(String imageName, String cmd);
