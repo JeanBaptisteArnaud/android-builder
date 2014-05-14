@@ -181,6 +181,7 @@ public class StackVM {
 			 int arg5, int arg6, int arg7, int arg8) {
        // int rc = sendEvent(type, stamp, arg3, arg4, arg5, arg6, arg7, arg8);
 	// return rc;
+	return 1;
     }
    
     /* VM callbacks */
