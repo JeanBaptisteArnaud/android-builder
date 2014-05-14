@@ -325,7 +325,7 @@ public class StackView extends View {
     	Rect dirtyRect = new Rect(0,0,0,0);
     	if(canvas.getClipBounds(dirtyRect)) {
     		//vm.updateDisplay(bits, width, height, depth, 
-				dirtyRect.left, dirtyRect.top, dirtyRect.right, dirtyRect.bottom);
+				//dirtyRect.left, dirtyRect.top, dirtyRect.right, dirtyRect.bottom);
     	}
         super.onDraw(canvas);
         canvas.drawColor(-1);
