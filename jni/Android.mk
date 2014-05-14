@@ -20,6 +20,7 @@ TARGET_ARCH = arm
 
 
 LOCAL_SRC_FILES = /builds/workspace/ARM-Android/build/version.c
+LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/sqAndroidNativeHook.c 
 LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/aio.c 
 LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/debug.c 
 LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/osExports.c 
