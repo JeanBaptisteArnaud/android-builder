@@ -180,7 +180,7 @@ public class StackVM {
     public int postEvent(int type, int stamp, int arg3, int arg4,
 			 int arg5, int arg6, int arg7, int arg8) {
        // int rc = sendEvent(type, stamp, arg3, arg4, arg5, arg6, arg7, arg8);
-	return rc;
+	// return rc;
     }
    
     /* VM callbacks */
