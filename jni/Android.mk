@@ -29,6 +29,7 @@ LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/sqUnixHear
 LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/sqUnixMain.c 
 LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/sqUnixMemory.c 
 LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/sqUnixVMProfile.c 
+LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/sqUnixThreads.c 
 #LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/SqSound.c 
 #LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/android/vm/SqDisplay.c
 LOCAL_SRC_FILES += /builds/workspace/ARM-Android/platforms/Cross/vm/sqExternalSemaphores.c
