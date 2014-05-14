@@ -287,7 +287,7 @@ public class StackVM {
     public native int sendEvent(int type, int stamp, int arg3, int arg4,
 				int arg5, int arg6, int arg7, int arg8);
     public native int updateDisplay(int bits[], int w, int h, int d, int l, int t, int r, int b);
-    public native int interpret();
+//    public native int interpret();
 	public native int main(int argc, char **argv, char **envp);
 
     public native void surelyExit();

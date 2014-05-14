@@ -278,7 +278,7 @@ public class StackActivity extends Activity implements TextToSpeech.OnInitListen
     	/* stupid setup dance but I'm not sure who is going to need what here */
     	vm = new StackVM();
     	vm.context = this;
-		vm.setLogLevel(9);
+		//vm.setLogLevel(9);
     	view = new StackView(this);
     	view.vm = vm;
     	vm.view = view;
