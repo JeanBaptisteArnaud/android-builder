@@ -195,7 +195,7 @@ public class StackVM {
 	if (view != null) view.showHideKbd(what);
     }
 
-    /* Display a brief message (toast) - to be called by the interpreter */
+    /* Display a brief message (toast) - to be called by the fer */
 
     public void briefMessage(String s) {
         Log.v(TAG, s);
@@ -288,6 +288,7 @@ public class StackVM {
 				int arg5, int arg6, int arg7, int arg8);
     public native int updateDisplay(int bits[], int w, int h, int d, int l, int t, int r, int b);
     public native int interpret();
+	public native int main(int argc, char **argv, char **envp);
 
     public native void surelyExit();
 
