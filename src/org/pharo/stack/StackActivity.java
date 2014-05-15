@@ -342,18 +342,9 @@ public class StackActivity extends Activity implements TextToSpeech.OnInitListen
     }
 
 
-    public void showBusyMsg() {
-	if (busy != null) busy.cancel();
-	busy = Toast.makeText(this, "*Busy*", 2000);
-	busy.setGravity(Gravity.CENTER, 0, 0);
-	busy.show();
-    }
+    public void showBusyMsg() {}
 
-    public void hideBusyMsg() {
-	if (busy != null) {
-	    busy.cancel();
-	    busy = null;
-	}
+    public void hideBusyMsg() {}
     }
 }
 
