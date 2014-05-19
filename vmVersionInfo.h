@@ -1,0 +1,1 @@
+#define REVISION_STRING "https://github.com/JeanBaptisteArnaud/pharo-vm.git Commit: 0d5a8fa3b437aa7a300ab9db8c38af9ce15c3edd Date: 2014-05-15 14:29:30 +0200 By: JeanBaptisteArnaud <jbaptiste.arnaud@gmail.com> Jenkins build #144"

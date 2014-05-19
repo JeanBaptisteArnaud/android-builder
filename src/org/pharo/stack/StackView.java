@@ -97,7 +97,7 @@ public class StackView extends View {
 		}
 		if(r <= 0) return;
 		int rc = 0;
-		if(vm != null) rc = vm.interpret();
+		//if(vm != null) rc = vm.interpret();
 		postDelayed(new StackTimer(), (rc != 0) ? 0 : timerDelay);
 	}
 
@@ -173,7 +173,7 @@ public class StackView extends View {
 	}
 
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
-		int rc;
+		int rc = 0;
 		switch(keyCode) {
 			case 59:
 			case 60:
@@ -209,11 +209,11 @@ public class StackView extends View {
 				switch(event.getScanCode()) {
 					case 102:	// Home
 						emulate(1);
-						rc = vm.interpret();
+						//rc = vm.interpret();
 						break;
 					case 107:	// End
 						emulate(4);
-						rc = vm.interpret();
+						//rc = vm.interpret();
 						break;
 					default:
 						rc = 0;
@@ -229,27 +229,27 @@ public class StackView extends View {
 						13 /* utf32Code */,
 						0 /* reserved1 */,
 						0 /* windowIndex */);
-				rc = vm.interpret();
+				//rc = vm.interpret();
 				break;
 			case KeyEvent.KEYCODE_DPAD_RIGHT: // special handling for right arrow
 				emulate(29);
-				rc = vm.interpret();
+				//rc = vm.interpret();
 				break;
 			case KeyEvent.KEYCODE_DPAD_LEFT: // special handling for left arrow
 				emulate(28);
-				rc = vm.interpret();
+				//rc = vm.interpret();
 				break;
 			case KeyEvent.KEYCODE_DPAD_UP: // special handling for up arrow
 				emulate(30, (event.getScanCode() == 0) ? 2 : 0); // 2 for wheel
-				rc = vm.interpret();
+				//rc = vm.interpret();
 				break;
 			case KeyEvent.KEYCODE_DPAD_DOWN: // special handling for down arrow
 				emulate(31, (event.getScanCode() == 0) ? 2 : 0); // 2 for wheel
-				rc = vm.interpret();
+				//rc = vm.interpret();
 				break;
 			case KeyEvent.KEYCODE_DEL: // special handling for DEL
 				emulate(8);
-				rc = vm.interpret();
+				//rc = vm.interpret();
 				break;
 			default:		 // send key event
 				int uchar = (keyCode != -1)?
@@ -266,6 +266,7 @@ public class StackView extends View {
 						uchar /* utf32Code */,
 						0 /* reserved1 */,
 						0 /* windowIndex */);
+				
 				rc = vm.interpret();
 		}
 		if(rc != 0) timerEvent(20, 1);
@@ -306,7 +307,8 @@ public class StackView extends View {
 		vm.postEvent(1 /* EventTypeMouse */, 0 /* timestamp */, 
 					ex, ey, 
 					buttons, modifiers, 0, 0);
-		int rc = vm.interpret();
+		//int rc = vm.interpret();
+		int rc =0;
 		lastX = ex;
 		lastY = ey;
 		lastBut = buttons;
@@ -321,12 +323,14 @@ public class StackView extends View {
      */
     @Override
     protected void onDraw(Canvas canvas) {
+	Log.v(TAG, "here is the Dragon;;;");
 	if (bits == null) return;
     	Rect dirtyRect = new Rect(0,0,0,0);
     	if(canvas.getClipBounds(dirtyRect)) {
-    		//vm.updateDisplay(bits, width, height, depth, 
-				//dirtyRect.left, dirtyRect.top, dirtyRect.right, dirtyRect.bottom);
+    		vm.updateDisplay(bits, width, height, depth, 
+				dirtyRect.left, dirtyRect.top, dirtyRect.right, dirtyRect.bottom);
     	}
+		Log.v(TAG, bits.toString());
         super.onDraw(canvas);
         canvas.drawColor(-1);
     	canvas.drawBitmap(bits, 0, width, 0, 0, width, height, false, paint);
@@ -355,6 +359,6 @@ public class StackView extends View {
     			0 /* Modifiers */, 
     			0, 0, 0);
     	}
-		vm.interpret();
+		//vm.interpret();
     }
 }

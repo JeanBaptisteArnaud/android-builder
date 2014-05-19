@@ -83,6 +83,7 @@ public class StackActivity extends Activity implements TextToSpeech.OnInitListen
  		    canspeak = true;
 		    if(vm != null) {
 			vm.mTts = mTts;
+			
 		    }
             }
         } else {
@@ -345,6 +346,6 @@ public class StackActivity extends Activity implements TextToSpeech.OnInitListen
     public void showBusyMsg() {}
 
     public void hideBusyMsg() {}
-    }
+
 }
 

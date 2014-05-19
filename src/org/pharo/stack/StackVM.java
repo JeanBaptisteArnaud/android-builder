@@ -170,7 +170,6 @@ public class StackVM {
 	        } else {
 	            imageDir = new File(imgpath).getParentFile();
       	            context.setWindowTitle("Stack: " + imgpath);
-	            interpret();
 	        }
     	    } catch (Exception e) {
 	    Log.v(TAG, "Failed to load image " + imageName + ": " + e.toString());
@@ -187,19 +186,17 @@ public class StackVM {
     /* VM callbacks */
     public void invalidate(int left, int top, int right, int bottom) {
     	/* System.out.println("Invalidating: (" + left + "," + top + " -- " + right + "," + bottom + ")"); */
-    	view.invalidate(left, top, right, bottom);
+    	//view.invalidate(left, top, right, bottom);
     }
 
     /* Show/hide soft keyboard: needed by a Smalltalk primitive */
 
     public void showHideKbd(int what) {
-	if (view != null) view.showHideKbd(what);
     }
 
     /* Display a brief message (toast) - to be called by the fer */
 
     public void briefMessage(String s) {
-        Log.v(TAG, s);
     }
 
     /* Obtain a string of text from Android clipboard, if available */
@@ -279,6 +276,8 @@ public class StackVM {
 	return Environment.getExternalStorageDirectory().getAbsolutePath();
     }
 
+
+
     /* PRELOAD functions */
     //public native int setLogLevel(int logLevel);
 
@@ -287,9 +286,9 @@ public class StackVM {
     public native int setImagePath(String imageName, String cmd);
     //public native int sendEvent(int type, int stamp, int arg3, int arg4,
 	//			int arg5, int arg6, int arg7, int arg8);
-    //public native int updateDisplay(int bits[], int w, int h, int d, int l, int t, int r, int b);
+  	public native int updateDisplay(int bits[], int w, int h, int d, int l, int t, int r, int b);
     public native int interpret();
-	//public native int main(int argc, char **argv, char **envp);
+	//public native int launch();
 
     //public native void surelyExit();
 
